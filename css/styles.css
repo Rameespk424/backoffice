@@ -897,6 +897,18 @@ header.relative {
   border-color: #016170;
   background-color: #3a3a3a;
 }
+@media (max-width: 500px) {
+  .newsletter .newsletter-input {
+    flex: none !important;
+    width: 180px !important;
+  }
+}
+@media (max-width: 400px) {
+  .newsletter .newsletter-input {
+    flex: none !important;
+    width: 150px !important;
+  }
+}
 .newsletter .newsletter-button {
   padding: 0.75rem 1.5rem;
   font-size: 16px;
