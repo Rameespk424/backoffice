@@ -1,10 +1,12 @@
+// Mobile Menu
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.getElementById("hamburger");
   const navLinks = document.getElementById("nav-links");
 
   hamburger.addEventListener("click", () => {
-    // Toggle active class on hamburger and nav-links
+   
     hamburger.classList.toggle("active");
     navLinks.classList.toggle("active");
   });
@@ -30,6 +32,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
+
+  // JavaScript to handle "Add to Cart" functionality
+
+
+const cartButtons = document.querySelectorAll(".add-to-cart-btn");
+const cartCountElement = document.getElementById("cart-count");
+
+
+let cartCount = 0;
+
+
+cartButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+
+    cartCount++;
+
+    cartCountElement.textContent = cartCount;
+  });
+});
+
 
 
 
