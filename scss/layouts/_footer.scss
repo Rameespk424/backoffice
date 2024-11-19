@@ -1,0 +1,197 @@
+.footer {
+    background-color: $color-footer;
+    padding-top: 90px;
+    padding-bottom: 0 !important;
+
+    .xx {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        text-align: left;
+
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img {
+                height: 50px;
+            }
+
+            span {
+                font-size: 22px;
+                color: $white;
+                font-weight: 600;
+                font-family: $font-logo;
+            }
+        }
+    }
+
+    .footer_part {
+
+        @media screen and (max-width:996px) {
+
+            margin-bottom: 40px;
+
+        }
+    }
+
+    h4 {
+        color: $color-white;
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .fp {
+        color: $color-p;
+        margin-bottom: 30px;
+        padding-top: 20px;
+        line-height: 1.7rem;
+        font-size: 18px;
+    }
+
+    .fpm {
+        color: $color-p;
+        font-size: 18px;
+        padding-top: 10px;
+
+        a {
+            color: $color-p;
+
+            &:hover {
+                text-decoration: none;
+                color: $color-white;
+            }
+        }
+    }
+.links{
+    padding-top: 40px;
+ li{
+    padding-bottom: 15px;
+    a{
+        color: $color-p;
+      
+    
+        line-height: 1.7rem;
+        font-size: 18px;
+        &:hover{
+            color: $white;
+        }
+    }
+ }
+    
+}
+
+    }
+
+    .footer_bottom {
+        margin-top: 30px;
+
+        padding: 30px 0;
+        color: $color-p;
+        font-size: 18px;
+        background-color: #05393b;
+        text-align: left;
+
+        a {
+            color: $color-white;
+            text-decoration: none;
+
+            &:hover {
+                color: $color-sub-head;
+            }
+        }
+    }
+    .newsletter {
+        display: flex;
+        align-items: center;
+        max-width: 400px; // Set a max width for the form
+        margin: 0 auto;
+      
+        .newsletter-input {
+          flex: 1;
+          padding: 0.75rem 1rem;
+          font-size: 1rem;
+          border: 1px solid #404040; // Border for the input
+          border-radius: 0.5rem 0 0 0.5rem; // Rounded left corners
+          outline: none;
+          background-color: #2d2d2d; // Match footer background
+          color: #b0b0b0; // Text color
+      
+          &::placeholder {
+            color: #7a7a7a; // Placeholder text color
+          }
+      
+          &:focus {
+            border-color: $primary-color; // Highlight border when focused
+            background-color: #3a3a3a;
+          }
+        }
+      
+        .newsletter-button {
+          padding: 0.75rem 1.5rem;
+          font-size: 1rem;
+          border: none;
+          background-color: $primary-color; // Blue background
+          color: #fff; // White text
+          border-radius: 0 0.5rem 0.5rem 0; // Rounded right corners
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+      
+          &:hover {
+            background-color: #0056b3; // Darker blue on hover
+          }
+      
+          &:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3); // Focus ring for accessibility
+          }
+        }
+      }
+      
+    .footer_icons {
+
+        @media screen and (max-width:996px) {
+
+            margin-bottom: 40px;
+
+            padding-bottom: 10px;
+
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            padding-left: 0;
+            margin-top: 20px;
+
+
+
+            li {
+                color: $color-p;
+                font-size: 18px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin-right: 20px;
+                background-color: #363434;
+                text-align: center;
+                padding-top: 11px;
+
+                img {
+                    width: 20px;
+                }
+
+
+                &:hover {
+                    background-color: $green-600
+                }
+            }
+        }
+    }

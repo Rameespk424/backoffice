@@ -1,0 +1,89 @@
+// Variables for container width breakpoints
+$container-max-width: 1200px;  // Max width for large screens (desktop)
+$container-padding: 20px;      // Padding for the container
+$container-gutter: 25px;       // Gap between container items (if any)
+
+// Breakpoints (Bootstrap-style)
+$breakpoint-xs: 480px;  // Mobile
+$breakpoint-sm: 768px;  // Tablets
+$breakpoint-md: 992px;  // Small desktops
+$breakpoint-lg: 1200px; // Large desktops
+
+// Container class
+.container {
+    width: 100%;
+    max-width: $container-max-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $container-padding;
+    padding-right: $container-padding;
+    box-sizing: border-box;
+
+    // Responsive adjustments for breakpoints
+    @media (max-width: $breakpoint-xs) {
+        padding-left: 15px; 
+        padding-right: 15px; 
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+        max-width: $container-max-width;
+    }
+}
+
+// Center content within the container
+.container-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // flex-direction: column; // Stack items vertically on small screens
+}
+
+// Grid layout within the container
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: $container-gutter;
+
+    // Responsive adjustments for grid columns
+    @media (max-width: $breakpoint-sm) {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    @media (max-width: $breakpoint-xs) {
+        grid-template-columns: 1fr; // Single column on mobile
+    }
+}
+
+// Bootstrap-like utility classes
+.container-fluid {
+    width: 100%;
+    padding-left: $container-padding;
+    padding-right: $container-padding;
+
+    @media (max-width: $breakpoint-xs) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+// Additional utility classes for spacing
+.mt-3 {
+    margin-top: 1rem;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.pt-3 {
+    padding-top: 1rem;
+}
+
+.pb-3 {
+    padding-bottom: 1rem;
+}

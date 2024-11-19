@@ -1,0 +1,117 @@
+// Featured Products Section
+.featured-products {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: $white;
+
+    h2 {
+        text-align: start;
+        font-size: 32px;
+        margin-bottom: 40px;
+        font-family: $font-roboto;
+        font-weight: 600;
+        color: $primary-color;
+    }
+
+
+
+    .product-card {
+        background-color: $white;
+        padding: 15px;
+        border-radius: 15px;
+        text-align: start;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 4px 24px;
+        width: 100%;
+        max-width: 400px;
+        transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+      margin-bottom: 20px;
+        img {
+          width: 100%;
+          height: auto;
+          margin-bottom: 15px;
+          object-fit: cover;
+          transition: transform 0.3s ease; /* Smooth zoom-in effect */
+        }
+      
+        h3 {
+          font-size: 1rem;
+          font-weight: 500;
+          color: black;
+          margin-bottom: 10px;
+        }
+      
+        .price {
+          font-size: 18px;
+          color: $text-color;
+          margin-bottom: 15px;
+          font-weight: 500;
+        }
+      
+        .product_bottom {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 10px;
+          align-items: center;
+      
+          .left_star {
+            display: flex;
+            justify-content: left;
+            gap: 10px;
+            align-items: center;
+          }
+      
+          img {
+            width: 18px;
+            margin-bottom: 0;
+          }
+      
+          span {
+            color: $green-600;
+            font-size: 18px;
+            margin-top: 6px;
+            font-weight: 500;
+          }
+        }
+      
+        .add-to-cart {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      
+          img {
+            width: 15px;
+          }
+      
+          border-radius: 50%;
+          height: 30px;
+          width: 30px;
+          padding: 10px;
+          background-color: $green-700;
+          border: none;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+      
+          &:hover {
+            background-color: darken($green-700, 10%);
+          }
+        }
+      
+        /* Hover Effects */
+        &:hover {
+          box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 32px; /* Increased shadow intensity */
+          transform: translateY(-5px); /* Slight lift effect */
+      
+          img {
+            transform: scale(1.1); /* Zoom in on the image */
+          }
+        }
+      }
+      
+      @media (max-width: 600px) {
+        .product-card {
+          padding: 10px;
+          max-width: 100%;
+        }
+      }
+      
+}

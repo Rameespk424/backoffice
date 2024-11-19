@@ -1,0 +1,9 @@
+{
+  "name": "backoffice",
+  "version": "1.0.0",
+  "scripts": {
+    "sass": "sass --watch scss/styles.scss:css/styles.css"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
