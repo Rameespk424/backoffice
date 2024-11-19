@@ -573,7 +573,8 @@ header.relative {
   gap: 15px;
 }
 .navbar_right_form input::placeholder {
-  font-size: 16px; /* Adjust the font size */
+  font-size: 16px;
+  /* Adjust the font size */
 }
 .navbar_right_form .input_wrapper {
   width: 60%;
