@@ -14,65 +14,61 @@
 
     <!-- Navigation starts here -->
 
-    <header id="header">
-        <div class="container container-center">
-            <nav class="nav">
-                <input type="checkbox" id="nav-check">
-                <div class="nav-header">
-                    <div class="logo">
-                        <img src="assets/logo/logo.svg" alt="Farhad’s Cll Company Logo">
-                        <span>Farhad’s Cll</span>
-                    </div>
-                </div>
-                <div class="nav-btn">
-                    <label for="nav-check">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </label>
-                </div>
+     <header id="header" class="navbar">
+             <div class="container">
+            <div class="logo">
+                <img src="assets/logo/logo.svg" alt="Farhad’s Cll Company Logo">
+                <span>Farhad’s Cll</span>
+            </div>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <nav class="nav-links" id="nav-links">
+            <ul>
+              <li><a href="#"  class="active" >Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
 
-                <div class="collapse">
-                    <ul class="nav-list">
-                        <li><a class="active" href="#">Home</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">Contact</a></li>
+
+
+            <form class="d-flex navbar_right_form">
+
+                <div class="input_wrapper" style="position: relative; display: inline-block;">
+                    <input class="form-control me-2" type="search" placeholder="Search product"
+                        aria-label="Search" style="padding-left: 30px;">
+                    <img src="assets/icons/topbar/search.svg"
+                        style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%);" alt="">
+                </div>
+                <div class="right_menu">
+                    <ul>
+
+                        <li>
+                            <a href="#" class="top_bar_links">
+                                <img src="assets/icons/mail.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="top_bar_links notification">
+                                <img src="assets/icons/bell (2).svg" alt="">
+                                <span class="count">2</span>
+                            </a>
+                        </li>
+
                     </ul>
-
-                    <form class="d-flex navbar_right_form">
-
-                        <div class="input_wrapper" style="position: relative; display: inline-block;">
-                            <input class="form-control me-2" type="search" placeholder="Search product"
-                                aria-label="Search" style="padding-left: 30px;">
-                            <img src="assets/icons/topbar/search.svg"
-                                style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%);" alt="">
-                        </div>
-                        <div class="right_menu">
-                            <ul>
-
-                                <li>
-                                    <a href="#" class="top_bar_links">
-                                        <img src="assets/icons/mail.svg" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="top_bar_links notification">
-                                        <img src="assets/icons/bell (2).svg" alt="">
-                                        <span class="count">2</span>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </form>
                 </div>
-
-            </nav>
+            </form>
+          </nav>
         </div>
-    </header>
+      </header>
+
 
     <!-- Navigation starts here -->
-
+   
+    
 
     <main>
         <!-- Hero Section -->
@@ -421,7 +417,10 @@
 
         <div class="footer_bottom">
             <div class="container ">
-                © 2024 Farhad’s Cll. All rights reserved | Design by <a href="#">Company Name</a>
+                <p>
+                    © 2024 Farhad’s Cll. All rights reserved | Design by <a href="#">Company Name</a>
+
+                </p>
             </div>
         </div>
     </footer>

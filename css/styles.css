@@ -551,103 +551,19 @@ header.relative {
   transform: translateY(-10px);
 }
 
-.nav {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.nav .collapse {
-  display: flex;
-}
-.nav .nav-header {
-  flex: 0.95;
-  padding-left: 1rem;
-}
-.nav .nav-header .logo {
+.logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.nav .nav-header .logo img {
+.logo img {
   height: 50px;
 }
-.nav .nav-header .logo span {
+.logo span {
   font-size: 22px;
   color: #016170;
   font-weight: 600;
   font-family: "Public Sans", sans-serif;
-}
-.nav .nav-list {
-  display: flex;
-  gap: 2rem;
-  padding-top: 5px;
-}
-.nav .nav-list li {
-  list-style-type: none;
-}
-.nav .nav-list li a {
-  text-decoration: none;
-  color: #5C5C5C;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 500;
-}
-.nav .nav-list li a:hover {
-  color: #009393 !important;
-  border-bottom: 1px solid #016170;
-  border-bottom-width: 2px;
-  transition: border 0.3s ease, transform 0.3s ease;
-}
-.nav .nav-list li .active {
-  color: #009393 !important;
-  border: 1px solid transparent;
-  border-bottom-color: #016170;
-  border-bottom-width: 2px;
-}
-.nav #nav-check {
-  display: none;
-}
-@media (max-width: 992px) {
-  .nav {
-    padding: 1rem;
-  }
-  .nav .nav-btn {
-    display: inline-block;
-    padding-top: 0.2rem;
-  }
-  .nav .nav-btn label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 13px;
-  }
-  .nav .nav-btn label span {
-    display: block;
-    width: 25px;
-    height: 10px;
-    border-top: 2px solid black;
-  }
-  .nav .nav-list {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-    background: #A1D2FF;
-    height: 0;
-    transition: all 0.3s ease-in;
-    top: 85px;
-    left: 0;
-    overflow: hidden;
-  }
-  .nav .nav-list li {
-    width: 100%;
-    margin-top: 1.5rem;
-  }
-  .nav #nav-check:checked ~ .nav-list {
-    height: calc(80vh - 50px) !important;
-  }
 }
 
 .navbar_right_form {
@@ -713,12 +629,119 @@ header.relative {
   text-align: center;
 }
 
+.navbar {
+  background-color: #fff;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .container .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.navbar .container .logo a {
+  text-decoration: none;
+  color: #016170;
+}
+.navbar .container .hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.navbar .container .hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #5C5C5C;
+  transition: all 0.3s ease;
+}
+.navbar .container .hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.navbar .container .hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.navbar .container .hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+.navbar .container .nav-links {
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+}
+.navbar .container .nav-links ul {
+  display: flex;
+  gap: 20px;
+}
+.navbar .container .nav-links ul li {
+  list-style: none;
+}
+.navbar .container .nav-links ul li a {
+  text-decoration: none;
+  color: #5C5C5C;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+.navbar .container .nav-links ul li a:hover {
+  color: #009393 !important;
+  border-bottom: 1px solid #016170;
+  border-bottom-width: 2px;
+  transition: border 0.3s ease, transform 0.3s ease;
+}
+.navbar .container .nav-links ul li .active {
+  color: #009393 !important;
+  border: 1px solid transparent;
+  border-bottom-color: #016170;
+  border-bottom-width: 2px;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex !important;
+  }
+  .nav-links {
+    position: absolute;
+    top: 65px !important;
+    right: 0;
+    background-color: #f4f4f4;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+  .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+  .nav-links ul li {
+    margin-bottom: 10px;
+  }
+  .nav-links.active {
+    max-height: 200px;
+  }
+}
 .hero {
-  background-image: url(../../assets/images/still-life-wireless-cyberpunk-headphones.jpg);
+  background-image: url(../assets/images/still-life-wireless-cyberpunk-headphones.jpg);
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
   height: 100vh;
+}
+@media (max-width: 768px) {
+  .hero {
+    height: 75vh;
+  }
+}
+@media (max-width: 576px) {
+  .hero {
+    height: 70vh;
+  }
 }
 .hero .hero_wrapper {
   background-color: rgba(0, 0, 0, 0.5);
@@ -742,6 +765,14 @@ header.relative {
   font-size: 4rem;
   line-height: 1.3 !important;
   margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .hero .hero-content {
+    width: 100%;
+  }
+  .hero .hero-content h1 {
+    font-size: 2.5rem;
+  }
 }
 .hero .hero-content p {
   padding-bottom: 50px;
@@ -789,19 +820,19 @@ header.relative {
   font-weight: 600;
 }
 .footer .fp {
-  color: #aaa;
+  color: #fff;
   margin-bottom: 30px;
   padding-top: 20px;
   line-height: 1.7rem;
-  font-size: 18px;
+  font-size: 16px;
 }
 .footer .fpm {
-  color: #aaa;
-  font-size: 18px;
+  color: #fff;
+  font-size: 16px;
   padding-top: 10px;
 }
 .footer .fpm a {
-  color: #aaa;
+  color: #fff;
 }
 .footer .fpm a:hover {
   text-decoration: none;
@@ -814,9 +845,9 @@ header.relative {
   padding-bottom: 15px;
 }
 .footer .links li a {
-  color: #aaa;
+  color: #fff;
   line-height: 1.7rem;
-  font-size: 18px;
+  font-size: 16px;
 }
 .footer .links li a:hover {
   color: #fff;
@@ -825,14 +856,18 @@ header.relative {
 .footer_bottom {
   margin-top: 30px;
   padding: 30px 0;
-  color: #aaa;
-  font-size: 18px;
+  color: #fff;
   background-color: #05393b;
   text-align: left;
+}
+.footer_bottom p {
+  font-size: 14px !important;
+  line-height: 1.6;
 }
 .footer_bottom a {
   color: #fff;
   text-decoration: none;
+  font-size: 14px;
 }
 .footer_bottom a:hover {
   color: #087b81;
@@ -847,7 +882,7 @@ header.relative {
 .newsletter .newsletter-input {
   flex: 1;
   padding: 0.75rem 1rem;
-  font-size: 1rem;
+  font-size: 16px;
   border: 1px solid #404040;
   border-radius: 0.5rem 0 0 0.5rem;
   outline: none;
@@ -863,13 +898,18 @@ header.relative {
 }
 .newsletter .newsletter-button {
   padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  font-size: 16px;
   border: none;
   background-color: #016170;
   color: #fff;
   border-radius: 0 0.5rem 0.5rem 0;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+@media (max-width: 500px) {
+  .newsletter .newsletter-button {
+    padding: 0.75rem 0.75rem;
+  }
 }
 .newsletter .newsletter-button:hover {
   background-color: #0056b3;
